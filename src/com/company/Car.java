@@ -11,6 +11,9 @@ public class Car {
         this.volume = volume;
     }
 
+    public Car() {
+    }
+
     public int getGlass() {
         return glass;
     }

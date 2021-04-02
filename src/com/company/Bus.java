@@ -7,8 +7,8 @@ public final class Bus extends Transport {
     private int wheel;
     private int trunk;
 
-    public Bus(int engine, int disks, Turbo turbo, String name, int wheel, int trunk) {
-        super(engine, disks, turbo);
+    public Bus(int glass, Color color, double volume, int engine, int disks, Turbo turbo, String name, int wheel, int trunk) {
+        super(glass, color, volume, engine, disks, turbo);
         this.name = name;
         this.wheel = wheel;
         this.trunk = trunk;
@@ -27,13 +27,13 @@ public final class Bus extends Transport {
     }
 
     @Override
-    public void makeVoice(int number, String voice) {
-        super.makeVoice(number, voice);
+    public void makeSignal(int number, String signal) {
+        super.makeSignal(number, signal);
     }
 
     @Override
     public String getInfo() {
-        return super.getInfo() + "\nName = " + name + "\nWheel = " + wheel + "\nTrunk = " + trunk +
-                "\n_________________";
+        return super.getInfo() +
+                "\nName = " + name + "\nWheel = " + wheel + "\nTrunk = " + trunk;
     }
 }

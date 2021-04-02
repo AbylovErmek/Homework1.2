@@ -1,13 +1,13 @@
 package com.company;
 
 public class Turbo {
-    private String[] power;
+    private String power;
 
-    public Turbo(String[] power) {
+    public Turbo(String power) {
         this.power = power;
     }
 
-    public String[] getPower() {
+    public String getPower() {
         return power;
     }
 }

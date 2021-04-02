@@ -7,8 +7,8 @@ public class Transport extends Car{
     private int disks;
     private Turbo turbo;
 
-    public Transport(int engine, int disks, Turbo turbo) {
-        super(4, Color.WHITE,2.5);
+    public Transport(int glass, Color color, double volume, int engine, int disks, Turbo turbo) {
+        super(glass, color, volume);
         this.engine = engine;
         this.disks = disks;
         this.turbo = turbo;
@@ -26,17 +26,18 @@ public class Transport extends Car{
         return turbo;
     }
 
-    public void makeVoice(int number, String voice) {
+    public void makeSignal(int number, String signal) {
         for (int i = 0; i < number; i++) {
-            System.out.println(voice);
+            System.out.print(signal);
         }
     }
 
-    public final void makeVoice(String voice) {
-        System.out.println(voice);
+    public final void makeSignal(String signal) {
+        System.out.println(signal);
     }
 
     public String getInfo() {
-        return "Engine = " + engine + "\nDisks = " + disks + "\nTurbo = " + turbo.toString();
+        return "\nEngine = " + engine + "\n---------------------" + "\nDisks = " + disks + "\nTurbo = "
+                + turbo.getPower();
     }
 }
